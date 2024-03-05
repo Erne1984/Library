@@ -32,8 +32,8 @@
 
         </section>
 
-        <dialog open>
-            <form>
+        <dialog >
+            <form method="dialog">
                 <h2>Add new Book</h2>
 
                 <div class="input-box">
@@ -47,21 +47,25 @@
                 </div>
 
                 <div class="input-checkbox">
-                    <label for="read">Readed?</label>
+                    <label for="read">Have you read it?</label>
                     <input class="checked" type="checkbox" id="read">
                 </div>
 
+                <div class="btn-form">  
+                    <button id="close-btn" type="submit">Submit</button>
+                </div>
+                
             </form>
         </dialog>
 
-        <div class="btn">
+        <div class="btn" id="add-btn">
             <button>+</button>
         </div>
 
     </main>
 
 
-    <script src=".assets/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@ main {
 h1 {
     margin-top: 40px;
     width: 80%;
+    color: #9c66ef;
 }
 
 .cards-container {
@@ -44,7 +45,7 @@ h1 {
 
 .btn button {
     border-radius: 50%;
-    background-color: #222222;
+    background-color: #9c66ef;
     padding: 30px;
     border: none;
     font-size: 1.4rem;
@@ -58,22 +59,25 @@ h1 {
 /*MODAL*/
 
 dialog {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: none;
 }
 
+dialog::backdrop {
+    background-color: rgba(18, 18, 18, 0.8);
+}
+
 dialog form {
-    padding: 15px;
+    padding: 20px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #222222;
 }
 
 dialog h2 {
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -81,7 +85,7 @@ dialog h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 17px 0;
+    margin: 20px 0;
 }
 
 .input-box input {
@@ -110,5 +114,18 @@ dialog h2 {
     padding: 5px;
     height: 20px;
     width: 20px;
-    background-color: #eee;
+}
+
+.btn-form {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-form button {
+    padding: 10px;
+    background-color: #9c66ef;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
