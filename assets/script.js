@@ -1,28 +1,38 @@
 const modal = document.querySelector("dialog");
-const addBtn = document.querySelector("#add-btn");
-const closeBtn = document.querySelector("#close-btn");
+const addBookBtn = document.querySelector("#add-book");
+const openModalBtn = document.querySelector("#add-btn");
+const submitBtn = document.querySelector("#submit-btn");
+
+const inputTitle = document.querySelector("#title");
+const inputAuthor = document.querySelector("#author");
+const inputPages = document.querySelector("#pages");
+const checkReaded = document.querySelector("#read");
+
+
 const myLibrary = [];
 
-function Book(title, author, pages,) {
+function Book(title, author, pages, readed) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.readed = readed;
-  this.info = function () {
-    const isReadedInfo = readed ? "was read" : "not read yet";
-
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${isReadedInfo}`
-  }
 }
 
 function addBookToLibrary() {
-  // do stuff here
+  let newBook = new Book(inputTitle.value, inputAuthor.value, inputPages.value.toString(), checkReaded.checked);
+
+  console.log(newBook)
 }
 
-addBtn.addEventListener("click", () => {
-  modal.showModal()
+function validatingInput() {
+
+}
+
+openModalBtn.addEventListener("click", () => {
+  modal.showModal();
 })
 
-closeBtn.addEventListener("click", () => {
-  modal.close()
+submitBtn.addEventListener("click", () => {
+  console.log(addBookToLibrary());
+  modal.close();
 })
