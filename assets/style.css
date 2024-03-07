@@ -22,8 +22,9 @@ h1 {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: 80%;
+    gap: 10px;
 }
 
 .card {
@@ -32,8 +33,18 @@ h1 {
     background-color: #222222;
 }
 
-.card>div {
+.card > div {
+    margin: 0 0 5px 0;
     background-color: #222222;
+}
+
+.card .title {
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.card .author {
+    font-size: 1.1rem;
 }
 
 .btn {
