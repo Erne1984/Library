@@ -89,5 +89,6 @@ openModalBtn.addEventListener("click", () => {
 })
 
 submitBtn.addEventListener("click", () => {
+  addBookToLibrary()
   modal.close();
 })
