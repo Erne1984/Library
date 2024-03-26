@@ -55,6 +55,11 @@ h1 {
 }
 
 .btn button {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background-color: #9c66ef;
     padding: 30px;
