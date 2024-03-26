@@ -9,18 +9,20 @@ const inputAuthor = document.querySelector("#author");
 const inputPages = document.querySelector("#pages");
 const checkReaded = document.querySelector("#read");
 
+class Book{
+  constructor(title, author, pages, readed){
+    this.title = title;
+    this.author = author;
+    this.page = pages;
+    this.readed = readed;;
+  }
+}
+
 const myBooks = [
   new Book("Metamorphosis", "Franz Kafka", 82, true),
   new Book("O Alienista", "Machado de Assis", 80, true),
   new Book("O Cavaleiro da Esperança", "Jorge Amado", 366, false),
 ];
-
-function Book(title, author, pages, readed) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.readed = readed;
-}
 
 function addBookToLibrary() {
   let newBook = new Book(inputTitle.value, inputAuthor.value, inputPages.value.toString(), checkReaded.checked);
